@@ -1,0 +1,138 @@
+* {
+  box-sizing: border-box;
+}
+body {
+  font-family: "Cairo", sans-serif;
+  margin: 0;
+  background-color: #1e2128;
+}
+html {
+  scroll-behavior: smooth;
+}
+.container {
+  margin: 10vh auto 30px;
+  max-width: 835px;
+  background-color: rgb(53 57 60);
+  padding: 20px;
+  border-radius: 8px;
+  -webkit-border-radius: 8px;
+  -moz-border-radius: 8px;
+  -ms-border-radius: 8px;
+  -o-border-radius: 8px;
+}
+
+#previewImage,
+.itemImage {
+  width: 100%;
+  height: 100%;
+  object-fit: fill;
+  cursor: pointer;
+  border: 5px solid white;
+}
+.items {
+  display: flex;
+  gap: 10px;
+  flex-wrap: wrap;
+  margin: 25px 0;
+}
+.item {
+  width: 150px;
+  height: 150px;
+  transition: all 0.5s;
+  -webkit-transition: all 0.5s;
+  -moz-transition: all 0.5s;
+  -ms-transition: all 0.5s;
+  -o-transition: all 0.5s;
+}
+.item:hover {
+  transform: scale(1.05) rotate(2deg);
+  -webkit-transform: scale(1.05) rotate(2deg);
+  -moz-transform: scale(1.05) rotate(2deg);
+  -ms-transform: scale(1.05) rotate(2deg);
+  -o-transform: scale(1.05) rotate(2deg);
+}
+button {
+  width: 150px;
+  height: 50px;
+  border: none;
+  margin: 30px auto;
+  display: block;
+  border-radius: 10px;
+  -webkit-border-radius: 10px;
+  -moz-border-radius: 10px;
+  -ms-border-radius: 10px;
+  -o-border-radius: 10px;
+  cursor: pointer;
+  font-size: 16px;
+  box-shadow: 0 0 10px 0 #746c6c;
+  transition: background-color 0.4s;
+  -webkit-transition: background-color 0.4s;
+  -moz-transition: background-color 0.4s;
+  -ms-transition: background-color 0.4s;
+  -o-transition: background-color 0.4s;
+}
+button:hover {
+  background-color: rgb(0 160 255);
+  color: white;
+}
+.or {
+  width: fit-content;
+  margin: 30px auto;
+  position: relative;
+  color: white;
+}
+.or::after {
+  content: "";
+  position: absolute;
+  width: 250%;
+  height: 3px;
+  background-color: white;
+  top: 50%;
+  left: 50px;
+}
+.or::before {
+  content: "";
+  position: absolute;
+  width: 250%;
+  height: 3px;
+  background-color: white;
+  top: 50%;
+  right: 50px;
+}
+.fullscreen {
+  width: 100vw;
+  height: 100vh;
+  background-color: rgba(0, 0, 0, 0.906);
+  top: 0;
+  left: 0;
+  position: fixed;
+}
+#fullscreenimg {
+  object-fit: contain;
+  width: 100%;
+  height: 100%;
+  padding: 25px;
+}
+.fullscreen i {
+  position: absolute;
+  top: 20px;
+  right: 35px;
+  color: red;
+  font-size: 30px;
+  cursor: pointer;
+}
+@media (max-width: 530px) {
+  #previewImage {
+    display: none;
+  }
+  .items {
+    flex-direction: column;
+  }
+  .item {
+    width: fit-content;
+    height: fit-content;
+  }
+  .container {
+    margin: 0 auto;
+  }
+}
